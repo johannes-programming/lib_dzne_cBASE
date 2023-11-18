@@ -1,4 +1,4 @@
-import lib_dzne_math.na as _na
+import na_quantors as _na
 
 
 def main(

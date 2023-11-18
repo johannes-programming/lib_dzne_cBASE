@@ -1,7 +1,7 @@
 import collections as _col
 
-import lib_dzne_math.na as _na
 import lib_dzne_seq as _seq
+import na_quantors as _na
 
 from . import _find_region, _keygenerator
 

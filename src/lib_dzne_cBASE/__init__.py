@@ -1,5 +1,4 @@
-import lib_dzne_filedata as _fd
-import lib_dzne_math.na as _na
+import na_quantors as _na
 
 from . import _mark, _mutations
 
