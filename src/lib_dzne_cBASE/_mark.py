@@ -10,7 +10,7 @@ def main(
 ):
     if _na.anyisna(parent_rating, child_rating):
         return float('nan')
-    if flags['vj-mismatch']:
+    if flags['vj_mismatch']:
         return 'R'
     if child_rating in list("RGBOE"):
         return child_rating
@@ -18,7 +18,7 @@ def main(
     if parent_rating in list("RG"):
         if child_rating == 'P':
             return 'G'
-        if flags['v-mismatch']:# rather implausible. lab error?
+        if flags['v_mismatch']:# rather implausible. lab error?
             return 'G'
         if flags['interruption']:
             return 'O'
@@ -27,7 +27,7 @@ def main(
     else:
         if child_rating == 'P':
             return 'R'
-        if flags['v-mismatch']:
+        if flags['v_mismatch']:
             return 'R'
         if flags['interruption']:
             return 'R'

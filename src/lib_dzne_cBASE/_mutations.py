@@ -15,7 +15,7 @@ def main(*, parent, child):
     sequences = [
         parent('cf', 'seq'), 
         child('cf', 'seq'), 
-        child('cf', 'template-seq'),
+        child('cf', 'template_seq'),
     ]
     if _na.anyisna(*sequences):
         return float('nan')
@@ -27,13 +27,13 @@ def main(*, parent, child):
     gen = _keygenerator.main(
         seqzip=seqzip, 
         trzip=trzip, 
-        chain_type=child('chain-type'),
+        chain_type=child('chain_type'),
         length=lengths[2],
     )
     mutations = {
         'flags': {'interruption': lengths[0] != min(lengths)},
-        'primers': {key: 0 for key in ['j-p-ins', 'j-p-del', 'fr1-p-del']},
-        'regions': {key: _col.defaultdict(int) for key in ['ns-ins', 'ns-del', 'ns-sub', 's-ins', 's-del']}
+        'primers': {key: 0 for key in ['j_p_ins', 'j_p_del', 'fr1_p_del']},
+        'regions': {key: _col.defaultdict(int) for key in ['ns_ins', 'ns_del', 'ns_sub', 's_ins', 's_del']}
     }
     for i, key in enumerate(gen):
         if key is None:

@@ -26,7 +26,7 @@ def main(*, sr, cf_index):
         junctioninfos = ["vd", "dj"]
     for a, b in junctioninfos:
         if _main(i, minimum=sr('top', a, 'end'), maximum=sr('top', b, 'go')) is True:
-            regions.append(f'{a}-{b}-junction')
+            regions.append(f'{a}_{b}_junction')
     if _main(i, maximum=sr('top', 'v', 'end')) is True:
         regions.append('v')
     if _main(i, minimum=sr('top', 'd', 'go'), maximum=sr('top', 'd', 'end')) is True:
